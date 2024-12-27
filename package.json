@@ -1,0 +1,28 @@
+{
+  "name": "page2vid",
+  "version": "1.0.0",
+  "description": "Record webpage as video",
+  "type": "module",
+  "bin": {
+    "page2vid": "./bin/page2vid.js"
+  },
+  "scripts": {
+    "start": "node ./bin/page2vid.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/costinEEST/page2vid.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/costinEEST/page2vid/issues"
+  },
+  "homepage": "https://github.com/costinEEST/page2vid#readme",
+  "dependencies": {
+    "commander": "^12.1.0",
+    "fluent-ffmpeg": "^2.1.3",
+    "playwright": "^1.49.1"
+  }
+}
