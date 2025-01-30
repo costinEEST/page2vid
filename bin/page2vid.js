@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-import { cwd } from "node:process";
+import { cwd, exit } from "node:process";
 import { join } from "node:path";
 import { program } from "commander";
 
@@ -23,11 +23,14 @@ program
   .option("-s, --speed <milliseconds>", "Scroll speed in milliseconds", "1000")
   .action(async (url, options) => {
     const { username, password, output, speed } = options;
+
     try {
       console.log(`Saving video to: ${output}`);
       await recordPage(url, username, password, output, parseInt(speed, 10));
     } catch (err) {
       console.error("Error:", err.message);
+
+      exit(1);
     }
   });
 
